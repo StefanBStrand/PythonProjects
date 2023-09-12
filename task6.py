@@ -12,6 +12,5 @@ print(round(3.6))  # Rounding a number
 # To gain access to more math functions in python, the following has to be typed into the file:
 from math import *
 
-print (floor(3.7))  # Floors the number
-print (ceil(3.2))  # Raises/rounds up
-print(sqrt(36))  # Square root
+print(floor(3.7))  # Floors the number
+print(ceil(3.2))  # Raises/rounds up
