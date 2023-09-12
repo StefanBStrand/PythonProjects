@@ -14,3 +14,4 @@ from math import *
 
 print(floor(3.7))  # Floors the number
 print(ceil(3.2))  # Raises/rounds up
+print(sqrt(36))  # square root
