@@ -5,7 +5,8 @@ import json
 admissions = {}
 with open('/Users/stefan/Documents/Dev/Informatikk_HIOF/Databasesystemer V24/Oblig2/innleggelser.csv',
           mode='r', encoding='utf-8') as infile:
-    reader = csv.DictReader(infile)
+    reader = csv.DictReader(infile, delimiter=';')
+    print(reader.fieldnames)
     for row in reader:
         patient_id = row['pasient_id']
         # Create a dictionary for each admission record
@@ -21,10 +22,10 @@ with open('/Users/stefan/Documents/Dev/Informatikk_HIOF/Databasesystemer V24/Obl
         admissions[patient_id].append(admission_record)
 
 # Update patients data with admissions
-with open('/Users/stefan/Documents/Dev/Informatikk_HIOF/Databasesystemer V24/Oblig2/pasienter_med_provinsNoSQL.csv',
+with open('/Users/stefan/Documents/Dev/Informatikk_HIOF/Databasesystemer V24/Oblig2/pasienter_med_provins.csv',
           mode='r', encoding='utf-8') as infile, open('updated_patients.csv', mode='w', encoding='utf-8',
                                                       newline='') as outfile:
-    reader = csv.DictReader(infile)
+    reader = csv.DictReader(infile, delimiter=';')
     fieldnames = reader.fieldnames + ['innleggelser']  # Add 'innleggelser' to field names
     writer = csv.DictWriter(outfile, fieldnames=fieldnames)
 
