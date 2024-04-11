@@ -3,7 +3,7 @@ import requests
 # Configuration
 login_url = "http://158.39.188.211/functions/passcheck12.php"
 username = "tomhnatt"
-password_file_path = "/Users/stefan/Documents/Dev/Informatikk_HIOF/Datasikkerhet/extended_default_passwords.txt"
+password_file_path = "/Users/stefan/Documents/Dev/Informatikk_HIOF/Datasikkerhet/200_passwords.txt"
 failure_indicator = "../index.php?page=kit12"  # Indicator of a failed login
 
 # Headers dictionary with the custom User-Agent
